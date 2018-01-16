@@ -1,9 +1,9 @@
 <h2>Today's Notes</h2>
-
+<div class="notice"><%= flash[:notice] %></div>
 <ul>
     <% @notes.each do |note| %>
         <li>
-            <%= note.content %>
+            <%= link_to note.content, note_path(note) %>
         </li>
     <%end%>
 </ul>

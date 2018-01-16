@@ -1,1 +1,11 @@
-<h2>Hi</h2>
+<h2>New Note</h2>
+
+<%= form_for @note do |f| %>
+    <div>
+        <%= f.label :content %>
+        <%= f.text_field :content %>
+    </div>
+    <% @note.user = @user %>
+    <%= f.submit "Add" %>
+<% end %>
+<%= link_to "Back", notes_path %>

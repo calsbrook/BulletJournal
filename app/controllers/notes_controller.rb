@@ -12,7 +12,7 @@ class NotesController < ApplicationController
     end
 
     def create
-        @note = Note.new
+        @note = Note.new(note_params)
     
         respond_to do |format|
           if @note.save
@@ -44,5 +44,9 @@ class NotesController < ApplicationController
         else
             render :edit
         end
+    end
+    private
+    def note_params
+        params.require(:note).permit(:content)
     end
 end

@@ -1,0 +1,9 @@
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<h2><%= @note.created_at %></h2>
+
+<p><%= @note.content %></p>
+
+<%= link_to "Home", notes_path %> |
+<%= link_to "Delete", note_path(@note), method: :delete, data: {confirm: "Are you sure you want to delete this note?"}%>
