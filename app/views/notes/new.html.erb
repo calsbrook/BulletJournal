@@ -2,8 +2,15 @@
 
 <%= form_for @note do |f| %>
     <div>
-        <%= f.label :content %>
         <%= f.text_field :content %>
+    </div>
+    <div>
+        <%= f.radio_button :types, "task" %>
+        <%= label :types_task, "Task" %>
+        <%= f.radio_button :types, "event" %>
+        <%= label :types_event, "Event" %>
+        <%= f.radio_button :types, "note" %>
+        <%= label :types_note, "Note" %>
     </div>
     <% @note.user = @user %>
     <%= f.submit "Add" %>
