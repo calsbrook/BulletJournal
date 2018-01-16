@@ -1,0 +1,10 @@
+<h2>Today's Notes</h2>
+
+<ul>
+    <% @notes.each do |note| %>
+        <li>
+            <%= note.content %>
+        </li>
+    <%end%>
+</ul>
+<%= link_to "New", new_note_path%>
