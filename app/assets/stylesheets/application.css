@@ -27,3 +27,11 @@ h1, h3 {
 h1 {
     margin-top: 20%;
 }
+
+li.event {
+    list-style-type: circle;
+}
+
+li.note {
+    list-style-type: square;
+}
