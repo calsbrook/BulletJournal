@@ -1,0 +1,12 @@
+<h2>All Habits</h2>
+<ul>
+    <% @habits.each do |habit| %>
+        <li>
+            <span>
+            <%= link_to habit.name, habit_path(habit) %>
+            <%= habit.color %>
+            </span>
+        </li>
+    <%end%>
+</ul>
+<%= link_to 'New Habit', new_habit_path %>

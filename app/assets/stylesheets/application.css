@@ -24,6 +24,12 @@ div.month {
      color: #28262C;
 }
 
+div.red {
+    background-color: red;
+    height: 20px;
+    width: 20px;
+}
+
 div.week {
     background-color: #F18701;
     font-size: 17px;

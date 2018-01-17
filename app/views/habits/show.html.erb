@@ -1,0 +1,5 @@
+<h2><%= @habit.name %></h2>
+<%= @habit.color %>
+<br><br>
+<%= link_to "Habits", habits_path %>
+<%= link_to "Delete", habit_path(@habit), method: :delete, data: {confirm: "Are you sure you want to delete this habit?"}%>

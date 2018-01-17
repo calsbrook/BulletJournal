@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180117170852) do
+ActiveRecord::Schema.define(version: 20180117182747) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "habits", force: :cascade do |t|
+    t.string "name"
+    t.date "dates", default: [], array: true
+    t.string "color"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_habits_on_user_id"
+  end
 
   create_table "notes", force: :cascade do |t|
     t.string "content"
@@ -35,5 +45,6 @@ ActiveRecord::Schema.define(version: 20180117170852) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "habits", "users"
   add_foreign_key "notes", "users"
 end
