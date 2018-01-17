@@ -21,6 +21,7 @@ div.month {
      text-align: left;
      margin: 0 auto;
      margin-top: 50px;
+     color: #28262C;
 }
 
 div.week {
@@ -29,10 +30,11 @@ div.week {
     width: 800px;
     padding: 0px 20px 500px;
     margin: 0 auto;
+    color: #28262C;
 }
 
 div.week a {
-    color: #F9F5FF;
+    color: #4357AD;
 }
 
 div.week > .table-striped > tr {

@@ -14,7 +14,7 @@
     </div>
     <div>
         Due:
-        <%= select_datetime Time.now, prefix: :due_date %>
+        <%= select_date Date.today, prefix: :due_date %>
     </div>
     <%= f.submit "Update" %>
 <% end %>

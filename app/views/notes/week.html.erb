@@ -5,7 +5,7 @@
             <%@notes.each do |note|%>
                 <%if note.due.year == date.year && note.due.month == date.month && note.due.day == date.day%>
                     <li class="<%=note.note_type%>">
-                        <%= note.content %>
+                        <%= link_to note.content, note_path(note) %>
                     </li>
                 <% end %>
             <% end %>
