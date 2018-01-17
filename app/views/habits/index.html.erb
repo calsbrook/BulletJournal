@@ -4,7 +4,7 @@
         <li>
             <span>
             <%= link_to habit.name, habit_path(habit) %>
-            <%= habit.color %>
+            <div class="<%=habit.color%>"></div>
             </span>
         </li>
     <%end%>
