@@ -62,6 +62,13 @@ div.header a {
      width: 200px;
      font-size: 15px;
 }
+body {
+    background-color: #F9F5FF;
+}
+
+span.true {
+    text-decoration: line-through;
+}
 
 .field {
     margin: 0, auto;

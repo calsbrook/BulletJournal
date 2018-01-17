@@ -2,9 +2,11 @@
 <%= month_calendar do |date| %>
     <strong><%= date.day %></strong>
     <p><%@notes.each do |note|%>
+        <span class="<%=note.complete%>">
         <%if note.due.year == date.year && note.due.month == date.month && note.due.day == date.day%>
             <%= link_to note.content, note_path(note) %>
         <% end %>
+        </span>
     </p>
     <% end %>
 <% end %>

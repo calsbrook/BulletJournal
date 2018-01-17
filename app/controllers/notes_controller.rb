@@ -14,6 +14,7 @@ class NotesController < ApplicationController
     def create
         @note = Note.new(note_params)
         dt = params[:due_date]
+        @note.complete = params[:complete]
         @note.due = Time.new(dt[:year], dt[:month], dt[:day])
         @note.user = current_user
         if @note.save
@@ -38,6 +39,7 @@ class NotesController < ApplicationController
         @note = Note.find(params[:id])
         dt = params[:due_date]
         @note.due = Time.new(dt[:year], dt[:month], dt[:day])
+        @note.complete = params[:complete]
         if @note.update_attributes(params.require(:note).permit(:handle, :content))
             redirect_to notes_path
         else
