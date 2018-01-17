@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <div class ="container">
+    <div class ="container header">
       <div class="row">
         <div class="col-sm">
           <p>
@@ -24,16 +24,24 @@
               Welcome, <%= current_user.name %>
               &nbsp;&nbsp;|&nbsp;&nbsp;
               <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <%= link_to "New Note", new_note_path%>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <%= link_to "All", notes_path%>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <%= link_to "Week", note_path('week')%>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <%= link_to "Month", note_path('month')%>
             <% else %>
               <%= link_to 'Log In', login_path %>
               &nbsp;&nbsp;|&nbsp;&nbsp;
               <%= link_to 'Sign Up', new_user_path %>
             <% end %>
           </p>
-        <div class ="col-sm">
-          <%= yield %>
+        
         </div>
       </div>
     </div>
+    <%= yield %>
   </body>
 </html>

@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
     def index
-        @notes = Note.all
+        @notes = current_user.notes
     end
 
     def show
@@ -13,22 +13,20 @@ class NotesController < ApplicationController
 
     def create
         @note = Note.new(note_params)
-    
-        respond_to do |format|
-          if @note.save
-            format.html { redirect_to @note, notice: 'Note was successfully created.' }
-            format.json { render :show, status: :created, location: @note }
-          else
-            format.html { render :new }
-            format.json { render json: @note.errors, status: :unprocessable_entity }
-          end
+        dt = params[:due_date]
+        @note.due = Time.new(dt[:year], dt[:month], dt[:day])
+        @note.user = current_user
+        if @note.save
+            redirect_to @note, notice: 'Note was successfully created.'
+        else
+            render :new
         end
     end
 
     def destroy
         @note = Note.find(params[:id])
         @note.destroy
-        flash[:notice] = "note deleted"
+        flash[:notice] = "Note deleted"
         redirect_to notes_path
     end
 
@@ -46,9 +44,17 @@ class NotesController < ApplicationController
         end
     end
 
-    private
+    def week
+        @notes = current_user.notes
+    end
     
+    def month
+        @notes = current_user.notes
+    end
+
+    private
+
     def note_params
-        params.require(:note).permit(:content, :types)
+        params.require(:note).permit(:content, :note_type)
     end
 end

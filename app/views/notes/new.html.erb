@@ -5,14 +5,17 @@
         <%= f.text_field :content %>
     </div>
     <div>
-        <%= f.radio_button :types, "task" %>
-        <%= label :types_task, "Task" %>
-        <%= f.radio_button :types, "event" %>
-        <%= label :types_event, "Event" %>
-        <%= f.radio_button :types, "note" %>
-        <%= label :types_note, "Note" %>
+        <%= f.radio_button :note_type, "task" %>
+        <%= label :note_type_task, "Task" %>
+        <%= f.radio_button :note_type, "event" %>
+        <%= label :note_type_event, "Event" %>
+        <%= f.radio_button :note_type, "note" %>
+        <%= label :note_type_note, "Note" %>
     </div>
-    <% @note.user = @user %>
+    <div>
+        Due:
+        <%= select_datetime Time.now, prefix: :due_date %>
+    </div>
     <%= f.submit "Add" %>
 <% end %>
 <%= link_to "Back", notes_path %>
