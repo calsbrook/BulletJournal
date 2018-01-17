@@ -35,6 +35,10 @@ div.week a {
     color: #F9F5FF;
 }
 
+div.week > .table-striped > tr {
+    height: 900px;
+}
+
 div.header {
     background-color: #4357AD;
     color: #F9F5FF;
@@ -43,16 +47,20 @@ div.header {
 div.header a {
     color: #F9F5FF;
 }
+
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
     background-color: #F3EFF5;
  }
- .table-striped > tbody >tr {
+
+.table-striped > tbody >tr {
      height: 120px;
- }
- .table-striped > tbody > tr > td {
+}
+
+.table-striped > tbody > tr > td {
      width: 200px;
      font-size: 15px;
- }
+}
+
 .field {
     margin: 0, auto;
     text-align: right;

@@ -21,6 +21,7 @@
         <div class="col-sm">
           <p>
             <% if current_user %>
+              &nbsp;&nbsp;&nbsp;&nbsp;
               Welcome, <%= current_user.name %>
               &nbsp;&nbsp;|&nbsp;&nbsp;
               <%= link_to 'Log Out', session_path('dummy'), method: :delete %>

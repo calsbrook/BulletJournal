@@ -1,0 +1,21 @@
+<h2>Edit Note</h2>
+
+<%= form_for @note do |f| %>
+    <div>
+        <%= f.text_field :content %>
+    </div>
+    <div>
+        <%= f.radio_button :note_type, "task" %>
+        <%= label :note_type_task, "Task" %>
+        <%= f.radio_button :note_type, "event" %>
+        <%= label :note_type_event, "Event" %>
+        <%= f.radio_button :note_type, "note" %>
+        <%= label :note_type_note, "Note" %>
+    </div>
+    <div>
+        Due:
+        <%= select_datetime Time.now, prefix: :due_date %>
+    </div>
+    <%= f.submit "Update" %>
+<% end %>
+<%= link_to "Back", notes_path %>

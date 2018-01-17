@@ -36,7 +36,8 @@ class NotesController < ApplicationController
 
     def update
         @note = Note.find(params[:id])
-
+        dt = params[:due_date]
+        @note.due = Time.new(dt[:year], dt[:month], dt[:day])
         if @note.update_attributes(params.require(:note).permit(:handle, :content))
             redirect_to notes_path
         else
