@@ -36,7 +36,9 @@ class HabitsController < ApplicationController
 
     def update
         @habit = Habit.find(params[:id])
-        if @habit.update_attributes(params.require(:habit).permit(:handle, :content))
+        @habit.name = params[:name]
+        @habit.dates = params[:day_complete]
+        if @habit.update_attributes(habit_params)
             redirect_to habits_path
         else
             render :edit

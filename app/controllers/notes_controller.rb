@@ -40,7 +40,7 @@ class NotesController < ApplicationController
         dt = params[:due_date]
         @note.due = Time.new(dt[:year], dt[:month], dt[:day])
         @note.complete = params[:complete]
-        if @note.update_attributes(params.require(:note).permit(:handle, :content))
+        if @note.update_attributes(note_params)
             redirect_to notes_path
         else
             render :edit
