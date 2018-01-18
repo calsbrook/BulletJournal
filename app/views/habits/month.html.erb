@@ -12,12 +12,13 @@
     <%= month_calendar do |date|%>
         <%= date.day %>
         <% @habits.each do |habit|%>
-            <% habit.dates.each do |hd| %>
-                <% if hd == date %>
-                    <div class="box <%=habit.color%>"></div>
+            <% if habit.dates %>
+                <% habit.dates.each do |hd| %>
+                    <% if hd == date %>
+                        <div class="box <%=habit.color%>"></div>
+                    <% end %>
                 <% end %>
             <% end %>
         <% end %>
     <% end %>
-
 </div>
