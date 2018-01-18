@@ -1,10 +1,20 @@
+<div class="left-bar">
+    <ul class="habit-list">
+        <% @habits.each do |habit| %>
+            <li>
+                <div class="box <%=habit.color%>"></div>
+                <%= link_to habit.name, edit_habit_path(habit) %>
+            </li>
+        <%end%>
+    </ul>
+</div>
 <div class="habitMonth">
     <%= month_calendar do |date|%>
         <%= date.day %>
         <% @habits.each do |habit|%>
             <% habit.dates.each do |hd| %>
                 <% if hd == date %>
-                    <div class="<%=habit.color%>"></div>
+                    <div class="box <%=habit.color%>"></div>
                 <% end %>
             <% end %>
         <% end %>

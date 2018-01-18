@@ -10,7 +10,17 @@
             <option value="red">Red</option>
             <option value="blue">Blue</option>
             <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
         </select>
+    </div>
+    <div class="week">
+        <%= week_calendar number_of_weeks: 1 do |date| %>
+            <%=date.month%>/<%= date.day %>
+            <br>
+            <%=check_box_tag('day_complete[]', date, checked = @habit.dates.include?(date))%>
+        <% end %>
     </div>
     <%= f.submit "Add" %>
 <% end %>

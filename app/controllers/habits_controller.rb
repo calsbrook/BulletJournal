@@ -16,6 +16,7 @@ class HabitsController < ApplicationController
         @habit.user = current_user
         @habit.name = params[:name]
         @habit.color = params[:colors]
+        @habit.dates = params[:day_complete]
         if @habit.save
             redirect_to @habit, notice: 'habit was successfully created.'
         else

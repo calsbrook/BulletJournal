@@ -6,7 +6,7 @@
     </div>
     <div>
         <%= week_calendar number_of_weeks: 1 do |date| %>
-            <%= date.day %>
+            <%=date.month%>/<%= date.day %>
             <br>
             <%=check_box_tag('day_complete[]', date, checked = @habit.dates.include?(date))%>
         <% end %>
