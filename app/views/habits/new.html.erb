@@ -15,10 +15,9 @@
             <option value="purple">Purple</option>
         </select>
     </div>
-    <div class="week">
-        <%= week_calendar number_of_weeks: 1 do |date| %>
-            <%=date.month%>/<%= date.day %>
-            <br>
+    <div class="editMonth">
+        <%= month_calendar number_of_weeks: 1 do |date| %>
+            <%= date.day %>
             <%=check_box_tag('day_complete[]', date, checked = @habit.dates.include?(date))%>
         <% end %>
     </div>

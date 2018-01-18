@@ -53,7 +53,21 @@ div.habitMonth {
     font-size: 17px;
     margin-top: 50px;
     color: #28262C;
-    background-color: #FDE8E9
+    background-color: #FDE8E9;
+}
+
+div.editMonth {
+    width: 770px;
+    margin: 0 auto;
+    font-size: 17px;
+    margin-top: 50px;
+    color: #28262C;
+    background-color: #FDE8E9;
+    text-align: right;
+}
+
+div.editMonth .table-striped > tbody >tr {
+    height: 20px;
 }
 
 div.box {
