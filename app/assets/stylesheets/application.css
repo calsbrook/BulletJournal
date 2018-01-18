@@ -13,7 +13,31 @@
  *= require_tree .
  *= require_self
  */
- 
+
+div.sidebar {
+    position: absolute;
+    margin-left: 82%;
+    height: 100%;
+    background-color: #4357AD;
+    font-size: 15px;
+    padding: 5px;
+}
+div.sidebar a {
+    color: #F9F5FF;
+}
+div.sidebar > ul {
+    list-style: none;
+    text-align: right;
+}
+
+div.index {
+    margin-left: 20%;
+    font-size: 17px;
+}
+
+div.index a {
+    color: #4357AD;
+}
 div.month {
      background-color: #F18701;
      font-size: 17px;
@@ -23,12 +47,20 @@ div.month {
      margin-top: 50px;
      color: #28262C;
 }
-
+div.habitMonth {
+    width: 770px;
+    margin: 0 auto;
+    font-size: 17px;
+    margin-top: 50px;
+    color: #28262C;
+    background-color: #FDE8E9
+}
 div.red {
     background-color: red;
     height: 20px;
     width: 20px;
     border-radius: 5px;
+    display: inline-block;
     }
 
 div.blue {
@@ -36,6 +68,7 @@ div.blue {
     height: 20px;
     width: 20px;
     border-radius: 5px;
+    display: inline-block;
 }
 
 div.orange {
@@ -43,7 +76,9 @@ div.orange {
     height: 20px;
     width: 20px;
     border-radius: 5px;
+    display: inline-block;
 }
+
 
 div.week {
     background-color: #F18701;

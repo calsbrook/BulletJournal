@@ -1,14 +1,18 @@
-<h2>All Notes</h2>
-<div class="notice"><%= flash[:notice] %></div>
-<ul class="notes">
-    <% @notes.each do |note| %>
-        <li class="<%= note.note_type %>">
-            <span class="<%=note.complete%>">
-            <%= link_to note.content, note_path(note) %>
-            <% if note.due %>
-            <%= note.due.month %>/<%= note.due.day%>
-            </span>
-            <%end%> 
-        </li>
-    <%end%>
-</ul>
+<div class="index">
+    <h2>To Do</h2>
+    <div class="notice"><%= flash[:notice] %></div>
+    <ul class="notes">
+        <% @notes.each do |note| %>
+            <% if !note.complete %>
+                <li class="<%= note.note_type %>">
+                    <span class="<%=note.complete%>">
+                    <%= link_to note.content, note_path(note) %>
+                    <% if note.due %>
+                    <%= note.due.month %>/<%= note.due.day%>
+                    </span>
+                    <% end %> 
+                <% end %>
+            </li>
+        <%end%>
+    </ul>
+</div>
