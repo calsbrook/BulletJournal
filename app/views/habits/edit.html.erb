@@ -1,11 +1,8 @@
 <div class="new">
     <h2><%=@habit.name%></h2>
     <%= form_for @habit do |f| %>
-    <div>
             <%= f.label 'Habit' %>
             <%= f.text_field(:name)%>
-    </div>
-</div>
     <div class="week">
         <%= week_calendar number_of_weeks: 1 do |date| %>
             <%=date.month%>/<%= date.day %>
@@ -13,7 +10,6 @@
             <%=check_box_tag('day_complete[]', date, checked = @habit.dates.include?(date))%>
         <% end %>
     </div>
-<div class="new">
-<%= f.submit "Update", class: 'btn btn-success' %>
-<% end %>
+    <%= f.submit "Update", class: 'btn btn-success' %>
+    <% end %>
 </div>
