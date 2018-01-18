@@ -22,6 +22,7 @@ div.left-bar {
     background-color: #FDE8E9;
     padding: 20px;
 }
+
 div.left-bar a {
     color: #4357AD;
 }
@@ -96,6 +97,10 @@ div.week {
 
 div.week a {
     color: #4357AD;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
 }
 
 div.week > .table-striped > tr {
