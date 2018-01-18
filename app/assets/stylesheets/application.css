@@ -1,10 +1,11 @@
 div.sidebar {
     position: absolute;
     margin-left: 82%;
-    height: 100%;
     background-color: #4357AD;
     font-size: 15px;
     padding: 5px;
+    margin-top: 50px;
+    padding: 20px;
 }
 
 div.sidebar a {
@@ -93,6 +94,7 @@ div.week {
     padding: 0px 20px 100px;
     margin: 0 auto;
     color: #28262C;
+    margin-top: 20px;
 }
 
 div.week a {
@@ -170,4 +172,9 @@ p#content {
 
 ul.habit-list {
     list-style: none;
+}
+
+.new {
+    margin-left: 100px;
+    font-size: 15px;
 }

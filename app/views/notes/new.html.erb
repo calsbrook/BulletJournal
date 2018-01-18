@@ -1,10 +1,10 @@
-<h2>New Note</h2>
+<h2 class="new">New Note</h2>
 
 <%= form_for @note do |f| %>
-    <div>
+    <div class="new">
         <%= f.text_field :content %>
     </div>
-    <div>
+    <div class="new">
         <%= f.radio_button :note_type, "task" %>
         <%= label :note_type_task, "Task" %>
         <%= f.radio_button :note_type, "event" %>
@@ -12,14 +12,14 @@
         <%= f.radio_button :note_type, "note" %>
         <%= label :note_type_note, "Note" %>
     </div>
-    <div>
+    <div class="new">
         Due:
         <%= select_date Date.today, prefix: :due_date %>
     </div>
-    <div>
+    <div class="new">
         <%= check_box_tag :complete %>
         <%= label_tag(:complete, "Complete") %>
     </div>
-    <%= f.submit "Add" %>
+    <span class="new"><%= f.submit "Add", class: 'btn btn-success' %></span>
 <% end %>
-<%= link_to "Back", notes_path %>
+<span class="new"><%= link_to "Back", notes_path %></span>

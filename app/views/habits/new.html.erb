@@ -1,11 +1,11 @@
-<h2>New Habit</h2>
+<h2 class="new">New Habit</h2>
 
 <%= form_for @habit do |f| %>
-    <div>
+    <div class="new">
         <%= f.label 'Habit' %>
         <input type="text" name="name">
     </div>
-    <div>
+    <div class="new">
         <select name="colors">
             <option value="red">Red</option>
             <option value="blue">Blue</option>
@@ -22,5 +22,5 @@
             <%=check_box_tag('day_complete[]', date, checked = @habit.dates.include?(date))%>
         <% end %>
     </div>
-    <%= f.submit "Add" %>
+    <span class="new"><%= f.submit "Add", class: 'btn btn-success' %></span>
 <% end %>

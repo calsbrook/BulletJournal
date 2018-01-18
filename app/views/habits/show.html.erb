@@ -1,6 +1,8 @@
-<h2><%= @habit.name %></h2>
-<%= @habit.color %>
-<br><br>
-<%= link_to "Habits", habits_path %>
-<%= link_to "Edit", edit_habit_path(@habit) %>
-<%= link_to "Delete", habit_path(@habit), method: :delete, data: {confirm: "Are you sure you want to delete this habit?"}%>
+<div class="new">
+    <h2><%= @habit.name %></h2>
+    <div class="box <%= @habit.color %>"></div>
+    <br><br>
+    <%= link_to "Habits", habits_path, class: 'btn btn-default' %>
+    <%= link_to "Edit", edit_habit_path(@habit), class: 'btn btn-primary'%>
+    <%= link_to "Delete", habit_path(@habit), method: :delete, data: {confirm: "Are you sure you want to delete this habit?"}, class: 'btn btn-danger'%>
+</div>
