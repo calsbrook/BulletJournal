@@ -16,10 +16,10 @@ A habit tracker helps you make and keep good habits.  You check off each day tha
 This app was built using Ruby and Rails.  It helped me understand the way databases can be related as well as provide a relatively simple platform to quickly make the app.  I also used an amazing gem called [Simple Calendar](https://github.com/excid3/simple_calendar).
 
 ### Try It Yourself
-[Bullet Journal](gabujo.herokuapp.com)
+[Bullet Journal](http://gabujo.herokuapp.com)
 
 ### Project Trello Board
-[My Trello Board](trello.com/b/YJLBffC9)
+[My Trello Board](http://trello.com/b/YJLBffC9)
 
 ### Unsolved Problems
 I wanted extra functionality on the Habit Tracker.  Ideally when you hover over a habit it would hide the boxes of all the other habits on the calendar.  This would help you see only one habit when you want to.
