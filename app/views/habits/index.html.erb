@@ -4,7 +4,7 @@
         <% @habits.each do |habit| %>
             <li>
                 <span>
-                <div class="box <%=habit.color%>"></div>
+                <div class="box" id="<%=habit.color%>"></div>
                 <%= link_to habit.name, habit_path(habit) %>
                 </span>
             </li>

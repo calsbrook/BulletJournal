@@ -2,7 +2,7 @@
     <ul class="habit-list">
         <% @habits.each do |habit| %>
             <li>
-                <div class="box <%=habit.color%>"></div>
+                <div class="box" id="<%=habit.color%>"></div>
                 <%= link_to habit.name, edit_habit_path(habit) %>
             </li>
         <%end%>
@@ -15,7 +15,7 @@
             <% if habit.dates %>
                 <% habit.dates.each do |hd| %>
                     <% if hd == date %>
-                        <div class="box <%=habit.color%>"></div>
+                        <div class="box" id="<%=habit.color%>"></div>
                     <% end %>
                 <% end %>
             <% end %>

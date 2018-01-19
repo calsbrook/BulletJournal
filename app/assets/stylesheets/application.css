@@ -77,27 +77,27 @@ div.box {
     display: inline-block;
 }
 
-div.red {
+div#red {
     background-color: red;
 }
 
-div.orange {
+div#orange {
     background-color: orange;
 }
 
-div.yellow {
+div#yellow {
     background-color: yellow;
 }
 
-div.green {
+div#green {
     background-color: green;
 }
 
-div.blue {
+div#blue {
     background-color: blue;
 }
 
-div.purple {
+div#purple {
     background-color: purple;
 }
 
