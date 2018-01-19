@@ -1,6 +1,4 @@
 class HabitsController < ApplicationController
-    before_action :authorize
-    
     def index
         @habits = current_user.habits
     end

@@ -1,6 +1,4 @@
 class NotesController < ApplicationController
-    before_action :authorize
-    
     def index
         @notes = current_user.notes
     end
