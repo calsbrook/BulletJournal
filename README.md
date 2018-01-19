@@ -13,7 +13,7 @@ Bullet journaling helps a user organize their tasks, events, and notes in a way 
 A habit tracker helps you make and keep good habits.  You check off each day that you meet a habit goal which makes you more accountable.
 
 ### Technologies Used
-This app was built using Ruby and Rails.  It helped me understand the way databases can be related as well as provide a relatively simple platform to quickly make the app.
+This app was built using Ruby and Rails.  It helped me understand the way databases can be related as well as provide a relatively simple platform to quickly make the app.  I also used an amazing gem called [Simple Calendar](https://github.com/excid3/simple_calendar).
 
 ### Try It Yourself
 [Bullet Journal](gabujo.herokuapp.com)
